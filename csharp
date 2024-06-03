@@ -1,0 +1,14 @@
+// Example code for creating a game in Unity with C#
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    private void Update()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
+    }
+}

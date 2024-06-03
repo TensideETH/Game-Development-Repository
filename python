@@ -1,0 +1,30 @@
+# Example code for creating a game with Pygame in Python
+import pygame
+
+pygame.init()
+
+# Define colors
+WHITE = (255, 255, 255)
+
+# Set screen dimensions
+size = (700, 500)
+screen = pygame.display.set_mode(size)
+
+# Set window title
+pygame.display.set_caption("My Game")
+
+# Main program loop
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Clear the screen and draw
+    screen.fill(WHITE)
+
+    # Update the screen
+    pygame.display.flip()
+
+# Quit the program
+pygame.quit()
